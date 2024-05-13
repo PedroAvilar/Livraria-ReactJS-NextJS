@@ -15,3 +15,4 @@ class ControleEditora {
         return editoras;
     }
 }
+export default ControleEditora;
