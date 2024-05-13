@@ -1,6 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import LivroLista from './LivroLista';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import LivroDados from './LivroDados';
