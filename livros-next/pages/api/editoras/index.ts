@@ -1,7 +1,7 @@
 import ControleEditora from "@/classes/controle/ControleEditora";
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const controleEditora = new ControleEditora();
+export const controleEditora = new ControleEditora();
 
 export default (req: NextApiRequest, res:NextApiResponse) => {
     try {
