@@ -15,14 +15,14 @@ class ControleLivro {
         return livros;
     }
     incluir (novoLivro: Livro): void {
-        const maiorCodigo = livros.reduce ((maior, livro) => (livro.codigo > maior ? livro.codigo : maior), 0);
+        const maiorCodigo = livros.reduce((maior, livro) => (livro.codigo > maior ? livro.codigo : maior), 0);
         novoLivro.codigo = maiorCodigo + 1;
         livros.push (novoLivro);
     }
     excluir (codigo: number): void {
         const indice = livros.findIndex (livro => livro.codigo === codigo);
         if (indice !== -1) {
-            livros.splice (indice, 1);
+            livros.splice(indice, 1);
         }
     }
 }

@@ -8,11 +8,11 @@ const editoras: Array <Editora> = [
 ];
 //Classe com métodos para retornar o nome da editora pelo código e outro para retornar o vetor das editoras.
 class ControleEditora {
-    getNomeEditora (codEditora: number): string {
-        const editora = editoras.filter (editora => editora.codEditora === codEditora) [0];
+    getNomeEditora(codEditora: number): string {
+        const editora = editoras.filter(editora => editora.codEditora === codEditora)[0];
         return editora.nome;
     }
-    getEditoras () {
+    getEditoras() {
         return editoras;
     }
 }
