@@ -13,8 +13,10 @@ function LinhaLivro (props) {
     return (
         <tr>
             <td>
-                {livro.titulo}
-                <button onClick={() => excluir (livro.codigo)}>Excluir</button>
+                <div className="d-flex flex-column">
+                    <span>{livro.titulo}</span>
+                    <button type="button" className="btn btn-danger col-md-6" onClick={() => excluir (livro.codigo)}>Excluir</button>
+                </div>
             </td>
             <td>{livro.resumo}</td>
             <td>{nomeEditora}</td>
@@ -41,22 +43,24 @@ function LivroLista () {
         setCarregado (false);
     }
     return (
-        <main>
-            <h1>Catálogo de livros</h1>
-            <table>
-                <thead>
-                    <tr>Título</tr>
-                    <tr>Resumo</tr>
-                    <tr>Editora</tr>
-                    <tr>Autores</tr>
-                </thead>
-                <tbody>
-                    {livros.map (livro => (
-                        <LinhaLivro key = {livro.codigo} livro = {livro} excluir = {excluir}/>
-                    ))}
-                </tbody>
-            </table>
-        </main>
+        <div className="container-fluid">
+            <main>
+                <h1 className="d-flex text-left my-2">Catálogo de livros</h1>
+                <table className="table table-striped">
+                    <thead className="bg-dark text-light">
+                        <td className="col-2 text-left p-2">Título</td>
+                        <td className="col-6 text-left p-2">Resumo</td>
+                        <td className="col-2 text-left p-2">Editora</td>
+                        <td className="col-2 text-left p-2">Autores</td>
+                    </thead>
+                    <tbody class = "">
+                        {livros.map (livro => (
+                            <LinhaLivro key = {livro.codigo} livro = {livro} excluir = {excluir}/>
+                        ))}
+                    </tbody>
+                </table>
+            </main>
+        </div>
     )
 }
 export default LivroLista;
