@@ -1,5 +1,6 @@
 import Livro from "../modelo/Livro";
 
+//Dados JSON para o livros.
 const livros: Array <Livro> = [
     {codigo: 1478, codEditora: 789, titulo: "JavaScript", 
     resumo: "Conheça a história da linguagem e sua sintaxe com exemplos.", autores: ["Will", "Pedro"]},
@@ -8,6 +9,7 @@ const livros: Array <Livro> = [
     {codigo: 9323, codEditora: 123, titulo: "HTML", 
     resumo: "Explore sua evolução e conheça todas as tags disponíveis.", autores: ["Pedro", "Avilar"]}
 ];
+//Classe com métodos para retornar o vetor de livros, incluir ou excluir.
 class ControleLivro {
     obterLivros () {
         return livros;
