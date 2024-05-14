@@ -10,9 +10,9 @@ export default function Home() {
       </Head>
       <Menu />
       <main className="styles.main">
-        <h1 className="styles.title">
-          Página inicial
-        </h1>
+          <h1 className="styles.title text-center">
+            Página inicial
+          </h1>
       </main>
     </div>
   )
