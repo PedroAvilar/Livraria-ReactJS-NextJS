@@ -1,3 +1,4 @@
+import MyApp from "@/componentes/_app";
 import { Menu } from "@/componentes/Menu";
 import Head from "next/head";
 import Image from "next/image";
