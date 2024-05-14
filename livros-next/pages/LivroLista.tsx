@@ -6,3 +6,5 @@ const LivroLista: NextPage = () => {
         <main>Olá, mundo.</main>
     )
 }
+
+export default LivroLista;

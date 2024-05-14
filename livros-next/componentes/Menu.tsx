@@ -7,18 +7,18 @@ export const Menu: React.FC = () => {
             <div className='container-fluid d-flex flex-row'>
                 <ul className='navbar-nav'>
                     <li className='nav-item'>
-                        <Link href='/'>
-                            <a className="nav-link">Home</a>
+                        <Link href='/' passHref>
+                            <p className="nav-link">Home</p>
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link href='/LivroLista'>
-                            <a className="nav-link">Catálogo</a>
+                        <Link href='/LivroLista' passHref>
+                            <p className="nav-link">Catálogo</p>
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link href='/LivroDados'>
-                            <a className="nav-link">Novo</a>
+                        <Link href='/LivroDados' passHref>
+                            <p className="nav-link">Novo</p>
                         </Link>
                     </li>
                 </ul>
