@@ -1,5 +1,5 @@
 import Link from "next/link";
-import MyApp from "./_app";
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const Menu: React.FC = () => {
     return(

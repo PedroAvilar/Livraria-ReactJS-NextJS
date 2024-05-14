@@ -1,7 +1,6 @@
-import MyApp from "@/componentes/_app";
+import 'bootstrap/dist/css/bootstrap.css';
 import { Menu } from "@/componentes/Menu";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
