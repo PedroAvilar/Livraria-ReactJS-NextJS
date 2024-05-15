@@ -4,7 +4,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="{style.container}">
       <Head>
         <title>Loja Next</title>
       </Head>

@@ -62,11 +62,7 @@ const obterLivros = async () => {
 }
 const excluirLivro = async (codigo: number) => {
     const response = await fetch (`${baseURL}/${codigo}`, {method: "DELETE"});
-    if (!response.ok) {
-        return {message: 'Falha ao excluir.'}
-    } else {
-        return {message: 'Sucesso ao excluir.'}
-    }
+    return response.ok
 }
 
 export default LivroLista;
