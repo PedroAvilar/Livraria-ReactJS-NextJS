@@ -9,10 +9,10 @@ export default function Home() {
         <title>Loja Next</title>
       </Head>
       <Menu />
-      <main className="styles.main">
-          <h1 className="styles.title text-center">
-            Página inicial
-          </h1>
+      <main className="{styles.main}">
+        <h1 className="{styles.title} text-center">
+          Página inicial
+        </h1>
       </main>
     </div>
   )

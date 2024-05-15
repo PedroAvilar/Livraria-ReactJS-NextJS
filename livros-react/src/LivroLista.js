@@ -53,7 +53,7 @@ function LivroLista () {
                         <td className="col-2 text-left p-2">Editora</td>
                         <td className="col-2 text-left p-2">Autores</td>
                     </thead>
-                    <tbody class = "">
+                    <tbody>
                         {livros.map(livro => (
                             <LinhaLivro key = {livro.codigo} livro = {livro} excluir = {excluir}/>
                         ))}
