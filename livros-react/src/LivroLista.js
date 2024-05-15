@@ -24,7 +24,7 @@ function LinhaLivro (props) {
         </tr>
     )
 }
-//Componente para carregamento dos livros.
+//Componente para exibir o catálogo de livros em uma tabela.
 function LivroLista () {
     const [livros, setLivros] = useState ([]);
     const [carregado, setCarregado] = useState (false);
@@ -37,15 +37,16 @@ function LivroLista () {
         if (!carregado) {obterLivros();}
     }, [carregado]);
 
-    //Método para excluir o livro.
+    //Método para excluir o livro chamado pelo botão.
     const excluir = (codigo) => {
          controleLivro.excluir (codigo);
         setCarregado (false);
     }
+    //Retorna o nome da tabela, seu cabeçalho e os livros com botão de exclusão.
     return (
-        <div className="container-fluid">
+        <div className="container">
             <main>
-                <h1 className="d-flex text-left my-2">Catálogo de livros</h1>
+                <h1 className="my-3">Catálogo de livros</h1>
                 <table className="table table-striped">
                     <thead className="bg-dark text-light">
                         <td className="col-2 text-left p-2">Título</td>

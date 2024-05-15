@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ControleLivro from "./controle/ControleLivros";
 import ControleEditora from "./controle/ControleEditora";
 import { useNavigate } from "react-router-dom";
@@ -7,19 +7,26 @@ import { useNavigate } from "react-router-dom";
 const controleLivro = new ControleLivro();
 const controleEditora = new ControleEditora();
 
+//Componente para exibir o formulário para um novo livro.
 function LivroDados () {
     const opcoes = controleEditora.getEditoras().map(editora => ({
         value: editora.codEditora,
         text: editora.nome
     }));
+    //Propriedades de estados do livro.
     const [titulo, setTitulo] = useState ('');
     const [resumo, setResumo] = useState ('');
     const [autores, setAutores] = useState ('');
     const [codEditora, setCodEditora] = useState(opcoes[0].value);
+
+    //Função de navegação do Hook.
     const navigate = useNavigate();
+
+    //Função chamada para caixa de seleção das editoras no return.
     const tratarCombo = (evento) => {
         setCodEditora(Number(evento.target.value));
     };
+    //Função chamada para enviar os dados das propriedades para a classe ControleLivro.
     const incluir = (evento) => {
         evento.preventDefault();
         const autoresArray = autores.split('\n');
@@ -33,10 +40,11 @@ function LivroDados () {
         controleLivro.incluir(novoLivro);
         navigate('/');
     }
+    //Retorna o formulário em HTML.
     return (
-        <main className="container-fluid">
+        <main className="container">
             <div className="row">
-                <h1>Dados do livro</h1>
+                <h1 className="my-3">Dados do livro</h1>
                 <form onSubmit={incluir}>
                     <div className="mb-3">
                         <label htmlFor="titulo" className="form-label">Título</label>
