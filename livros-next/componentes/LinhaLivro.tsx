@@ -1,5 +1,4 @@
 import ControleEditora from "@/classes/controle/ControleEditora";
-import MyApp from "./_app";
 import Livro from "@/classes/modelo/Livro";
 import React from "react";
 

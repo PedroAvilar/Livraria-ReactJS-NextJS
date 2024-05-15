@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
+import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from "react";
 import styles from '../styles/Home.module.css'
-import { features } from "process";
 import Livro from "@/classes/modelo/Livro";
 import Head from "next/head";
 import { Menu } from "@/componentes/Menu";
@@ -27,22 +27,22 @@ const LivroLista: NextPage = () => {
 	}
 
     return (
-        <div className="{styles.container}">
+        <div className={styles.container}>
             <Head>
                 <title>Loja Next</title>
             </Head>
             <Menu />
-            <main className="{styles.main}">
-                <h1 className="{styles.title} text-center">
+            <main className={styles.main}>
+                <h1 className={styles.title}>
                     Catálogo de livros
                 </h1>
                 <table className="table table-striped">
                     <thead>
-                        <tr className="bg-dark text-light">
-                            <th className="col-2 text-left p-2">Título</th>
-                            <th className="col-6 text-left p-2">Resumo</th>
-                            <th className="col-2 text-left p-2">Editora</th>
-                            <th className="col-2 text-left p-2">Autores</th>
+                        <tr>
+                            <th className="col-2 text-left p-2 bg-dark text-light">Título</th>
+                            <th className="col-6 text-left p-2 bg-dark text-light">Resumo</th>
+                            <th className="col-2 text-left p-2 bg-dark text-light">Editora</th>
+                            <th className="col-2 text-left p-2 bg-dark text-light">Autores</th>
                         </tr>
                         </thead>
                     <tbody>

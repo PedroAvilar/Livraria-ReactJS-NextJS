@@ -6,6 +6,7 @@ import Livro from "@/classes/modelo/Livro";
 import { Router, useRouter } from "next/router";
 import { Menu } from "@/componentes/Menu";
 import Head from "next/head";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const controleEditora = new ControleEditora();
 
@@ -47,13 +48,13 @@ const LivroDados: NextPage = () => {
         incluirLivro(livro).then(() => router.push('/LivroLista'))
     }
     return (
-        <div className="{styles.container}">
+        <div className={styles.container}>
             <Head>
                 <title>Loja Next</title>
             </Head>
             <Menu />
-            <main className="{styles.main} container-fluid">
-                <h1 className="{styles.title}">
+            <main className={styles.main}>
+                <h1 className={styles.title}>
                     Dados do livro
                 </h1>
                 <form onSubmit={incluir}>

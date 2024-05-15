@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css';
 import "../app/globals.css";
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
